@@ -9,6 +9,10 @@ public class FollowCamera : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(playerPos.position.x, playerPos.position.y, -10);
+        if(playerPos != null)
+        {
+            transform.position = new Vector3(playerPos.position.x, playerPos.position.y, -10);
+        }
+        
     }
 }

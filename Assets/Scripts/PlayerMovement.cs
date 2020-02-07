@@ -43,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case State.normal:
-                print("normal");
                 UpdateMovement();
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
@@ -52,7 +51,6 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case State.dashing:
-                print("dashing");
                 if (!isDashing)
                 {
                     StartCoroutine(Dash());
@@ -61,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
                 break;
 
             case State.recovery:
-                print("recovery");
                 UpdateMovement();
                 if (!isRecovering)
                 {

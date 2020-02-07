@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
                 health--;
             }            
             Destroy(collision.gameObject);
+            FindObjectOfType<GameSession>().EnemyKilled();
         }
     }
 
