@@ -16,9 +16,11 @@ public class GameSession : MonoBehaviour
     }
 
     private void Update()
-    {        
-        if(enemyRemaining <= 0)
+    {
+        print(enemyRemaining);
+        if (enemyRemaining <= 0)
         {
+            
             enemySpawner.SpawnWave();
             enemyRemaining = enemySpawner.GetNumberEnemy();
         }        

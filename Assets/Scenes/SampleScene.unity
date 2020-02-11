@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1191055804
 Transform:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1196917331
 Transform:
   m_ObjectHideFlags: 0
@@ -900,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1613924733
 Transform:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1829609361
 Transform:
   m_ObjectHideFlags: 0
@@ -1716,11 +1716,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3371513036853473536, guid: 687993d39c72f4745bff1552abb98a9a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4062846082168414521, guid: 687993d39c72f4745bff1552abb98a9a,
         type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 0a52825b2cbb58144885e3110d58c9f9, type: 2}
+    - target: {fileID: 4062846082168414522, guid: 687993d39c72f4745bff1552abb98a9a,
+        type: 3}
+      propertyPath: health
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 4062846082168414523, guid: 687993d39c72f4745bff1552abb98a9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1786,25 +1796,5 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 4062846082401946911, guid: 687993d39c72f4745bff1552abb98a9a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062846082401946911, guid: 687993d39c72f4745bff1552abb98a9a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.123636246
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062846082401946911, guid: 687993d39c72f4745bff1552abb98a9a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4062846082401946911, guid: 687993d39c72f4745bff1552abb98a9a,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687993d39c72f4745bff1552abb98a9a, type: 3}

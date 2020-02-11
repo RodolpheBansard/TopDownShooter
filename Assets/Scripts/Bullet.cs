@@ -10,9 +10,14 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy enemy = collision.GetComponent<Enemy>();
+        Player player = collision.GetComponent<Player>();
         if(enemy != null)
         {
             enemy.TakeDamage(damage);
+        }
+        if(player != null && FindObjectOfType<PlayerMovement>().GetState() != PlayerMovement.State.dashing)
+        {
+            player.TakeDamage(damage);
         }
 
         Destroy(gameObject);

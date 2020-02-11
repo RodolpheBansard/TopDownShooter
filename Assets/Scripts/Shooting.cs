@@ -7,14 +7,14 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    public float bulletForce = 20f;
+    public float bulletSpeed = 20f;
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation) as GameObject;
-            bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            bullet.GetComponent<Rigidbody2D>().velocity = firePoint.up * bulletSpeed;
         }
     }
 

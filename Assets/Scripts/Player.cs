@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] int health = 1;
+      
 
     private void Update()
     {
@@ -20,12 +21,15 @@ public class Player : MonoBehaviour
         {
             if(gameObject.GetComponentInChildren<PlayerMovement>().GetState() != PlayerMovement.State.dashing)
             {
-                health--;
+                TakeDamage(1);
             }            
             Destroy(collision.gameObject);
             FindObjectOfType<GameSession>().EnemyKilled();
         }
     }
 
-
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+    }
 }
