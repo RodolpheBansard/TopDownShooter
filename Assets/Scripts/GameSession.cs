@@ -16,8 +16,7 @@ public class GameSession : MonoBehaviour
     }
 
     private void Update()
-    {
-        print(enemyRemaining);
+    {        
         if (enemyRemaining <= 0)
         {
             
@@ -28,6 +27,7 @@ public class GameSession : MonoBehaviour
 
     public void EnemyKilled()
     {
+        
         enemyRemaining--;
     }
 }

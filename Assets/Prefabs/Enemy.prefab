@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1330d4f302ce4ac4bb16378e9e41ddf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 5
   health: 3
   colors:
   - {r: 1, g: 0, b: 0, a: 1}

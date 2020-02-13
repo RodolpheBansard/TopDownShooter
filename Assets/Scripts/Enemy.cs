@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     private Player player;
     private GameSession gameSession;
     private SpriteRenderer sprite;
+    private bool contactWithPlayer = false;
     
 
     
@@ -46,10 +47,15 @@ public class Enemy : MonoBehaviour
 
         if(health <= 0)
         {
-            gameSession.EnemyKilled();
             Destroy(gameObject);
             
+            
         }
+    }
+
+    public void SetContactWithPlayer(bool var)
+    {
+        contactWithPlayer = var;
     }
 
     public void TakeDamage(int damage)
@@ -70,5 +76,14 @@ public class Enemy : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = (player.transform.position - firePoint.position).normalized * bulletSpeed;
         }
         
+    }
+
+    private void OnDestroy()
+    {
+        if (contactWithPlayer)
+        {
+            player.TakeDamage(1);
+        }
+        gameSession.EnemyKilled();
     }
 }

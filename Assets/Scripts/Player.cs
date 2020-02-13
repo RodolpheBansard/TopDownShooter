@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+            FindObjectOfType<Scene>().LoadGameOver();
         }
     }
 
@@ -21,10 +22,10 @@ public class Player : MonoBehaviour
         {
             if(gameObject.GetComponentInChildren<PlayerMovement>().GetState() != PlayerMovement.State.dashing)
             {
-                TakeDamage(1);
+                collision.GetComponent<Enemy>().SetContactWithPlayer(true);
             }            
             Destroy(collision.gameObject);
-            FindObjectOfType<GameSession>().EnemyKilled();
+            
         }
     }
 
